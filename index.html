@@ -2,36 +2,104 @@
   <head>
     <title>Learning CSS</title>
     <style>
+      /* Add style to all elements with Internal CSS */
       h1 {
-        color: rgb(0, 145, 255);
+        color: yellowgreen;
       }
 
       p {
         margin: 32px;
       }
-
+      em {
+        color: purple;
+        font-size: 24px;
+      }
+      strong {
+        color: slateblue;
+        font-size: 24px;
+      }
+      /* Heading with gradient */
+      h4 {
+        margin: 32px;
+      }
+      /* Center my button */
       button {
+        display: block;
+        margin: auto;
+      }
+      /* Styling my list */
+      ul {
+        list-style-type: square;
+      }
+      li {
+        color: purple;
+        /* Bullet color */
+      }
+      span {
+        color: green;
+        /* List item text color */
+      }
+      /* Heading for my list */
+      h3 {
+        color: slateblue;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       }
 
       /* TODO: add styles for header  */
+      header {
+        background-color: blueviolet;
+        font-family: "Courier New", Courier, monospace;
+      }
 
       /* TODO: add styles for footer  */
+      footer {
+        font-size: x-small;
+        background-color: blueviolet;
+        color: white;
+      }
+      /* Style the main section */
+      main {
+        border: solid 4px slateblue;
+      }
 
       .paragraph-1 {
         background-color: pink;
       }
+      /* Used a class to center my table */
+      .center-table {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      /* Style table with borders */
+      table, th, td {
+        border: solid 2px purple;
+        padding: 4px;
+      }
+      /* Padding for the rainbow gradient paragraph */
+      .rainbow {
+        padding: 20px;
+      }
+      /* Center my list */
+      div.list-container {
+        text-align: center;
+      }
+      ul.center-list {
+        display: inline-block;
+        text-align: left;
+      }
     </style>
+  <!-- Links our HTML doc to an External CSS stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
+  <!-- Inline CSS with the style attribute in all opening tags -->
   <body>
     <header>
-      <!-- Too much I know...Just playing around. -->
+      <!-- Figuring out the wavy style. -->
       <h1
         style="
           text-decoration: underline;
           text-decoration-style: wavy;
           text-align: center;
-          border: dashed 4px yellowgreen;
         "
       >
         I like cats!
@@ -79,8 +147,22 @@
         id neque aliquam vestibulum morbi blandit cursus. Fringilla urna
         porttitor rhoncus dolor. A erat nam at lectus urna duis.
       </p>
-
-      <p style="background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);">
+      <!-- Playing around with gradients -->
+      <p
+        class="rainbow"
+        style="
+          background-image: linear-gradient(
+            to right,
+            red,
+            orange,
+            yellow,
+            green,
+            blue,
+            indigo,
+            violet
+          );
+        "
+      >
         The standard chunk of Lorem Ipsum used since the 1500s is reproduced
         below for those interested. Sections 1.10.32 and 1.10.33 from "de
         Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
@@ -88,20 +170,39 @@
         by H. Rackham.
       </p>
 
-      <h4 style="text-align: center; background-image: linear-gradient(to bottom right, rgb(174, 0, 255), yellow);">Lets's Try Some Gradients!!</h4>
+      <h4
+        style="
+          text-align: center;
+          background-image: linear-gradient(
+            to bottom right,
+            rgb(174, 0, 255),
+            yellow
+          );
+        "
+      >
+        Lets's Try Some Gradients!!
+      </h4>
 
-      <table border="1">
+      <table class="center-table">
         <tr>
           <th style="background-color: bisque">Item</th>
           <th style="background-color: bisque">Price</th>
         </tr>
         <tr>
-          <td style="color: blue">Hotwheels Car</td>
+          <td style="color: blue">Canvas</td>
           <td style="color: red">$4.99</td>
         </tr>
         <tr>
-          <td style="color: purple">Cabbage patch doll</td>
+          <td style="color: purple">Paint</td>
           <td style="color: red">$1.99</td>
+        </tr>
+        <tr>
+          <td style="color: limegreen;">Slime Kit</td>
+          <td style="color: red;">$8.99</td>
+        </tr>
+        <tr>
+          <td style="color: blueviolet;">Squishmallow</td>
+          <td style="color: red;">$20.99</td>
         </tr>
       </table>
       <br />
@@ -111,13 +212,29 @@
       >
         Buy Now!
       </button>
+      <br />
     </main>
+ <!-- Put list and heading in a div to style with Internal CSS -->
+    <div class="list-container">
+      <h3>A few of my favorite things:</h3>
+      <ul class="center-list">
+        <li><span>Ice Cream</span></li>
+        <li><span>Video Games</span></li>
+        <li><span>Tv Shows</span></li>
+        <li><span>Books</span></li>
+        <li><span>Yoga</span></li>
+        <li><span>Knitting</span></li>
+      </ul>
+    </div>
 
     <nav>
-      <a> HOME </a> | <a> ABOUT </a> |
+      <a> HOME </a>
+      <br />
+      <a> ABOUT </a>
+      <br />
       <a> GALLERY </a>
     </nav>
-
+ <!-- Copyright symbol in footer -->
     <footer>
       <p style="text-align: center">Created at CodeX &copy;</p>
     </footer>
