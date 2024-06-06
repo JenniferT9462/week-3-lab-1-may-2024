@@ -107,7 +107,19 @@
       img:hover {
         opacity: 0.5;
         background-color: navy;
+      }
+       /*Navbar...Just wanted to see what it looked like in the header... */
+       /* They don't go anywhere because I don't have multiple pages yet */
+       nav {
+        display: flex;
+        justify-content: space-around;
       } 
+      a {
+        background-color: yellowgreen;
+        text-decoration: none;
+        color: navy;
+      }
+
      
     </style>
   <!-- Links our HTML doc to an External CSS stylesheet -->
@@ -126,7 +138,15 @@
       >
         I like cats!
       </h1>
+      <nav>
+        <a href="index.html" class="active"> HOME </a>
+        <br />
+        <a href="about.html"> ABOUT </a>
+        <br />
+        <a href="gallery.html"> GALLERY </a>
+      </nav>
     </header>
+
     <main>
       <p
         class="paragraph-1"
@@ -255,13 +275,7 @@
 
     
 
-    <nav>
-      <a> HOME </a>
-      <br />
-      <a> ABOUT </a>
-      <br />
-      <a> GALLERY </a>
-    </nav>
+    
  <!-- Copyright symbol in footer -->
     <footer>
       <p style="text-align: center">Created at CodeX &copy;</p>
